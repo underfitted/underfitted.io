@@ -1,3 +1,13 @@
 # underfitted.io
 
-- [What's the impact on our neural network's training time when we introduce a _dropout_ operation?](questions/dropout-runtime.md)
+### Contributing
+
+```shell
+$ firebase serve --port 5050
+```
+
+To deploy the local changes:
+
+```shell
+$ firebase deploy
+```
