@@ -1,105 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="tailwind.css" rel="stylesheet" />
+        <!-- General medatada -->
+        <meta name="author" content="" />
+        <meta name="title" content="" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta name="twitter:site" content="" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image:alt" content="" />
+
         <title>Underfitted Social Club</title>
+
+        <!-- <link rel="icon" type="image/png" href="images/icon_16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="images/icon_32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="images/icon_96.png" sizes="96x96" /> -->
+
+        <link href="tailwind.css" rel="stylesheet" />
     </head>
 
-    <body>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <body class="bg-gray-50">
+        <!-- Firebase -->
         <script src="/__/firebase/8.2.5/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-          https://firebase.google.com/docs/web/setup#available-libraries -->
         <script src="/__/firebase/8.2.5/firebase-analytics.js"></script>
-
-        <!-- Initialize Firebase -->
         <script src="/__/firebase/init.js"></script>
 
-        <main class="mx-auto px-4 pt-16 pb-22">
-            <div class="text-center">
-                <h1
-                    class="
-                        text-4xl
-                        tracking-tight
-                        font-extrabold
-                        text-gray-900
-                        sm:text-5xl
-                        md:text-6xl
-                    "
-                >
-                    <span class="block text-red-800 xl:inline">Underfitted</span>
-                    <span class="block xl:inline">Social Club</span>
-                </h1>
-                <p
-                    class="
-                        mt-3
-                        max-w-md
-                        mx-auto
-                        text-base text-gray-700
-                        sm:text-lg
-                        md:mt-5 md:text-xl md:max-w-3xl
-                    "
-                >
-                    A community of people passionate about machine learning.
-                </p>
-                <p
-                    class="
-                        mt-3
-                        max-w-md
-                        mx-auto
-                        text-base text-gray-700
-                        sm:text-lg
-                        md:mt-5 md:text-xl md:max-w-3xl
-                    "
-                >
-                    Our mission is to
-                    <span class="text-gray-900 font-bold">decentralize</span> the
-                    machine learning field, enabling
-                    <span class="text-gray-900 font-bold">individuals</span> to
-                    <span class="text-gray-900 font-bold">contribute</span>,
-                    <span class="text-gray-900 font-bold">make an impact</span>, and
-                    <span class="text-gray-900 font-bold">directly benefit</span> from
-                    their contributions.
-                </p>
+        <section class="relative py-10 overflow-hidden bg-white sm:py-16 lg:py-20">
+            <div class="absolute inset-0">
+                <img
+                    class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left opacity-20"
+                    src="images/underfitted_art_2.png"
+                    alt=""
+                />
             </div>
 
-            <div class="mt-16 max-w-md mx-auto sm:flex sm:justify-center md:mt-16">
-                <div class="rounded-md shadow">
+            <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <div class="text-center md:w-2/3 mx-auto">
+                    <h1 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-6xl">
+                        Underfitted Social Club
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-800">A community of people passionate about machine learning.</p>
+                    <p class="mt-4 text-xl text-gray-800">
+                        Our mission is to <strong>decentralize</strong> the machine learning field, enabling
+                        <strong>individuals</strong> to <strong>contribute, make an impact</strong>, and
+                        <strong>directly benefit</strong> from their contributions.
+                    </p>
+
                     <a
                         href="https://discord.gg/Fqf5uvj3NG"
+                        title="Underfitted Scoial Club Discord server"
                         class="
-                            w-full
-                            flex
-                            items-center
-                            justify-center
-                            px-8
-                            py-3
-                            border border-transparent
-                            text-base
-                            font-medium
-                            rounded-md
+                            inline-flex
+                            mt-12
+                            text-center
+                            px-10
+                            py-4
+                            font-semibold
                             text-white
-                            bg-red-800
-                            hover:bg-red-700
-                            md:py-4 md:text-lg md:px-10
+                            rounded-md
+                            bg-gradient-to-br
+                            from-pink-600
+                            to-blue-600
+                            hover:from-pink-700 hover:to-blue-700
                         "
-                        target="_blank"
+                        role="button"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 127.14 96.36"
-                            fill="#fff"
-                            class="w-8 mr-3"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" fill="#fff" class="w-8 mr-3">
                             <g>
                                 <g id="Discord_Logos" data-name="Discord Logos">
-                                    <g
-                                        id="Discord_Logo_-_Large_-_White"
-                                        data-name="Discord Logo - Large - White"
-                                    >
+                                    <g id="Discord_Logo_-_Large_-_White" data-name="Discord Logo - Large - White">
                                         <path
                                             d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"
                                         />
@@ -111,510 +86,377 @@
                     </a>
                 </div>
             </div>
-        </main>
+        </section>
 
-        <div class="mt-16 mx-auto max-w-6xl px-4">
-            <div class="mt-10 lg:mt-10 bg-gray-800 p-8 rounded-lg">
-                <h2
-                    class="leading-6 text-red-200 font-semibold tracking-wide uppercase"
-                >
-                    Achieving our mission
-                </h2>
-                <h3
-                    class="
-                        mt-2
-                        text-3xl
-                        leading-8
-                        font-extrabold
-                        tracking-tight
-                        text-gray-100
-                        sm:text-3xl
-                    "
-                >
-                    We have 3 fundamental believes:
-                </h3>
+        <section class="text-lg text-gray-700 bg-gray-50 py-4">
+            <div
+                class="
+                    mt-6
+                    px-8
+                    py-8
+                    mx-auto
+                    bg-white
+                    max-w-5xl
+                    sm:px-6
+                    lg:px-8
+                    2xl:rounded-xl
+                    shadow-lg
+                    border-purple-800 border-solid border-2
+                "
+            >
+                <h2 class="uppercase text-blue-600 text-xs font-semibold tracking-widest">Achieving our mission</h2>
 
-                <div class="p-2">
-                    <ol class="ml-8 mt-3 text-gray-200 text-2xl list-decimal">
-                        <li class="mt-4">
-                            Machine learning education should be accessible to
-                            everybody.
-                        </li>
-                        <li class="mt-4">
-                            Decentralized communities are vital to empowering and
-                            amplifying individual voices.
-                        </li>
-                        <li class="mt-4">
-                            Individuals should benefit directly from their contributions
-                            regardless of credentials, affiliation, or background.
-                        </li>
-                    </ol>
-                    <p
-                        class="
-                            mt-5
-                            prose prose-indigo
-                            text-2xl text-gray-200
-                            mx-auto
-                            lg:max-w-none lg:row-start-1 lg:col-start-1
-                        "
-                    >
-                        The central piece of our plan is to build a group of
-                        <span class="font-bold"
-                            >Decentralized Autonomous Organizations</span
-                        >
-                        (DAO) around specific projects, allowing individual members to
-                        contribute while self-governing with unparalleled levels of
-                        autonomy.
+                <h3 class="text-3xl font-bold pt-6">We have 3 fundamental believes:</h3>
+                <ol class="list-decimal pl-12">
+                    <li class="mt-4">Machine learning education should be accessible to everybody.</li>
+                    <li class="mt-4">
+                        Decentralized communities are vital to empowering and amplifying individual voices.
+                    </li>
+                    <li class="mt-4">
+                        Individuals should benefit directly from their contributions regardless of credentials,
+                        affiliation, or background.
+                    </li>
+                </ol>
+
+                <p class="mt-8">
+                    The central piece of our plan is to build a group of Decentralized Autonomous Organizations (DAO)
+                    around specific projects, allowing individual members to contribute while self-governing with
+                    unparalleled levels of autonomy.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-10 bg-gray-50 sm:py-16">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-xs font-semibold tracking-widest uppercase text-blue-600">
+                        What's happening right now?
+                    </p>
+
+                    <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+                        We are building our first project!
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-gray-600">
+                        A place where people can test their machine learning skills, learn, and push their careers to
+                        the next level.
                     </p>
                 </div>
-            </div>
 
-            <div class="bg-white">
-                <div class="pt-12 sm:pt-16 lg:pt-24">
-                    <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                        <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
-                            <h2
-                                class="
-                                    text-lg
-                                    leading-6
-                                    font-semibold
-                                    text-red-800
-                                    uppercase
-                                    tracking-wider
-                                "
-                            >
-                                What's happening right now?
-                            </h2>
-                            <p
-                                class="
-                                    text-3xl
-                                    font-extrabold
-                                    text-gray-900
-                                    sm:text-4xl
-                                    lg:text-5xl
-                                "
-                            >
-                                We are building our first project!
+                <div class="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 lg:mt-20 lg:gap-x-12 text-base text-gray-600">
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">Our first project</h3>
+                            <p class="mt-4">
+                                A fully autonomous machine learning platform to evaluate your machine learning skills.
                             </p>
-                            <p class="text-xl text-gray-600">
-                                A place where people can test their machine learning
-                                skills, learn, and push their careers to the next level.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 pb-4 bg-white sm:mt-12 sm:pb-4 lg:mt-16 lg:pb-4">
-                    <div class="relative">
-                        <div class="absolute inset-0 h-3/4 bg-white"></div>
-                        <div
-                            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-                        >
-                            <div
-                                class="
-                                    max-w-md
-                                    mx-auto
-                                    space-y-4
-                                    lg:max-w-5xl
-                                    lg:grid
-                                    lg:grid-cols-2
-                                    lg:gap-5
-                                    lg:space-y-0
-                                "
-                            >
-                                <div
+
+                            <ul class="list-disc list-outside ml-4">
+                                <li class="mt-3">Governed and developed entirely by the community.</li>
+                                <li class="mt-3">
+                                    Autonomous and decentralized. Everyone contributes and decide where the project
+                                    goes.
+                                </li>
+                                <li class="mt-3">
+                                    Built on top of bleeding edge technology, giving you an opportunity to grow.
+                                </li>
+                            </ul>
+
+                            <p class="text-center">
+                                <a
+                                    href="https://discord.gg/Fqf5uvj3NG"
+                                    title="Underfitted Scoial Club Discord server"
                                     class="
-                                        flex flex-col
-                                        rounded-lg
-                                        shadow-lg
-                                        overflow-hidden
+                                        inline-flex
+                                        mt-12
+                                        text-center
+                                        px-10
+                                        py-4
+                                        font-semibold
+                                        text-white
+                                        rounded-md
+                                        bg-gradient-to-br
+                                        from-pink-600
+                                        to-blue-600
+                                        hover:from-pink-700 hover:to-blue-700
                                     "
+                                    role="button"
                                 >
-                                    <div class="px-6 py-8 bg-gray-100 sm:p-10 sm:pb-2">
-                                        <div
-                                            class="
-                                                mt-4
-                                                flex
-                                                items-baseline
-                                                text-3xl
-                                                font-extrabold
-                                            "
-                                        >
-                                            Our first project
-                                        </div>
-                                        <p class="mt-5 text-lg text-gray-500">
-                                            A fully autonomous machine learning platform
-                                            to evaluate your machine learning skills.
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="
-                                            flex-1 flex flex-col
-                                            justify-between
-                                            px-6
-                                            pt-6
-                                            pb-8
-                                            bg-gray-100
-                                            space-y-6
-                                            sm:p-10 sm:pt-2
-                                        "
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 127.14 96.36"
+                                        fill="#fff"
+                                        class="w-8 mr-3"
                                     >
-                                        <ul
-                                            role="list"
-                                            class="
-                                                text-lg
-                                                space-y-4
-                                                ml-8
-                                                list-outside list-disc
-                                                text-gray-500
-                                            "
-                                        >
-                                            <li>
-                                                Governed and developed entirely by the
-                                                community.
-                                            </li>
-                                            <li>
-                                                Autonomous and decentralized. Everyone
-                                                contributes and decide where the project
-                                                goes.
-                                            </li>
-                                            <li>
-                                                Built on top of bleeding edge
-                                                technology, giving you an opportunity to
-                                                grow.
-                                            </li>
-                                        </ul>
-                                        <div class="rounded-md shadow">
-                                            <a
-                                                href="https://discord.gg/Fqf5uvj3NG"
-                                                class="
-                                                    w-full
-                                                    flex
-                                                    items-center
-                                                    justify-center
-                                                    px-8
-                                                    py-3
-                                                    border border-transparent
-                                                    text-base
-                                                    font-medium
-                                                    rounded-md
-                                                    text-white
-                                                    bg-red-800
-                                                    hover:bg-red-700
-                                                    md:py-4 md:text-lg md:px-10
-                                                "
-                                                target="_blank"
-                                            >
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 127.14 96.36"
-                                                    fill="#fff"
-                                                    class="w-8 mr-3"
+                                        <g>
+                                            <g id="Discord_Logos" data-name="Discord Logos">
+                                                <g
+                                                    id="Discord_Logo_-_Large_-_White"
+                                                    data-name="Discord Logo - Large - White"
                                                 >
-                                                    <g>
-                                                        <g
-                                                            id="Discord_Logos"
-                                                            data-name="Discord Logos"
-                                                        >
-                                                            <g
-                                                                id="Discord_Logo_-_Large_-_White"
-                                                                data-name="Discord Logo - Large - White"
-                                                            >
-                                                                <path
-                                                                    d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"
-                                                                />
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                                Join our Project
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                                    <path
+                                                        d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"
+                                                    />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    Join our Project
+                                </a>
+                            </p>
+                        </div>
+                    </div>
 
-                                <div
-                                    class="
-                                        flex flex-col
-                                        rounded-lg
-                                        shadow-lg
-                                        overflow-hidden
-                                    "
-                                >
-                                    <div class="px-6 py-8 bg-gray-100 sm:p-10 sm:pb-6">
-                                        <div
-                                            class="
-                                                mt-4
-                                                flex
-                                                items-baseline
-                                                text-3xl
-                                                font-extrabold
-                                            "
-                                        >
-                                            Governance token
-                                        </div>
-                                        <p class="mt-5 text-lg text-gray-500">
-                                            A fundamental piece of our vision is a
-                                            system to financially reward members
-                                            proportionally to their contributions to the
-                                            community.
-                                        </p>
-                                        <p class="mt-5 text-lg text-gray-500">
-                                            We are also working on this.
-                                        </p>
-                                        <p class="mt-5 text-lg text-gray-500">
-                                            Our plan is to use a crypto token as the
-                                            central piece of this system.
-                                        </p>
-                                        <p class="mt-5 text-lg text-gray-500">
-                                            To increase the value of this token over
-                                            time, we are planning to offer to the public
-                                            different services built by the community.
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="
-                                            flex-1 flex flex-col
-                                            justify-between
-                                            px-6
-                                            pt-6
-                                            pb-8
-                                            bg-gray-100
-                                            space-y-6
-                                            sm:p-10 sm:pt-6
-                                        "
-                                    ></div>
-                                </div>
-                            </div>
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">Governance token</h3>
+
+                            <p class="mt-4">
+                                A fundamental piece of our vision is a system to financially reward members
+                                proportionally to their contributions to the community.
+                            </p>
+
+                            <p class="mt-3">We are also working on this.</p>
+
+                            <p class="mt-3">Our plan is to use a crypto token as the central piece of this system.</p>
+
+                            <p class="mt-3">
+                                To increase the value of this token over time, we are planning to offer to the public
+                                different services built by the community.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bg-white mt-2">
-                <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-                    <h2
-                        class="
-                            text-5xl
-                            font-extrabold
-                            text-gray-900 text-center
-                            sm:text-5xl
-                            lg:text-5xl
-                        "
-                    >
+        <section class="py-10 bg-gray-50 sm:py-16">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                         Frequently Asked Questions
                     </h2>
-                    <p class="text-xl text-gray-600 mt-4 text-center">
+                    <p class="mt-4 text-base leading-relaxed text-gray-600">
                         We don't have all the answers, but we do have some.
                     </p>
-                    <div class="mt-12">
-                        <dl
-                            class="
-                                space-y-10
-                                md:space-y-0
-                                md:grid
-                                md:grid-cols-2
-                                md:gap-x-8
-                                md:gap-y-12
-                                lg:grid-cols-3
-                            "
-                        >
-                            <div>
-                                <dt class="text-xl leading-6 font-bold text-gray-900">
-                                    Why is this a DAO?
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
-                                    <p class="mt-4">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Sed, odio esse accusamus
-                                        tempora incidunt itaque dolores laborum
-                                        inventore deserunt dolore. Sit obcaecati sint
-                                        quasi ad aspernatur ab. Iusto, consequatur
-                                        voluptatibus?
-                                    </p>
-                                </dd>
-                            </div>
+                </div>
 
-                            <div>
-                                <dt class="text-xl leading-6 font-bold text-gray-900">
-                                    I don't know much about machine learning. Can I
-                                    still join?
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
-                                    <p class="mt-4">Absolutely!</p>
-                                    <p class="mt-4">
-                                        Not only is this community the perfect place to
-                                        get started with machine learning, but we are
-                                        also looking for passionate people from
-                                        different backgrounds and experiences willing to
-                                        help.
-                                    </p>
-                                </dd>
-                            </div>
+                <div class="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-3 lg:mt-20 lg:gap-x-12 text-base text-gray-600">
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">Why is this a DAO?</h3>
 
-                            <div>
-                                <dt class="text-xl leading-6 font-bold text-gray-900">
-                                    I've never done anything with web3. Can I still
-                                    join?
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
-                                    <p class="mt-4">Again, yes!</p>
-                                    <p class="mt-4">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Sed, odio esse accusamus
-                                        tempora incidunt itaque dolores laborum
-                                        inventore deserunt dolore. Sit obcaecati sint
-                                        quasi ad aspernatur ab. Iusto, consequatur
-                                        voluptatibus?
-                                    </p>
-                                </dd>
-                            </div>
+                            <p class="mt-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio esse accusamus
+                                tempora incidunt itaque dolores laborum inventore deserunt dolore. Sit obcaecati sint
+                                quasi ad aspernatur ab. Iusto, consequatur voluptatibus?
+                            </p>
+                        </div>
+                    </div>
 
-                            <div>
-                                <dt class="text-xl leading-6 font-bold text-gray-900">
-                                    Do I need to pay to become a member?
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
-                                    <p class="mt-4">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Sed, odio esse accusamus
-                                        tempora incidunt itaque dolores laborum
-                                        inventore deserunt dolore. Sit obcaecati sint
-                                        quasi ad aspernatur ab. Iusto, consequatur
-                                        voluptatibus?
-                                    </p>
-                                </dd>
-                            </div>
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">
+                                I don't know much about machine learning. Can I still join?
+                            </h3>
 
-                            <div>
-                                <dt class="text-xl leading-6 font-bold text-gray-900">
-                                    Another question
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
-                                    <p class="mt-4">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Sed, odio esse accusamus
-                                        tempora incidunt itaque dolores laborum
-                                        inventore deserunt dolore. Sit obcaecati sint
-                                        quasi ad aspernatur ab. Iusto, consequatur
-                                        voluptatibus?
-                                    </p>
-                                </dd>
-                            </div>
+                            <p class="mt-4">Absolutely!</p>
 
-                            <div>
-                                <dt class="text-xl leading-6 font-bold text-gray-900">
-                                    How can I join?
-                                </dt>
-                                <dd class="mt-2 text-base text-gray-500">
-                                    <p class="mt-4">
-                                        We are still accepting founder members, and we
-                                        are planning to recognize them as soon as we
-                                        finish working on our ownership and governance
-                                        token.
-                                    </p>
+                            <p class="mt-4">
+                                Not only is this community the perfect place to get started with machine learning, but
+                                we are also looking for passionate people from different backgrounds and experiences
+                                willing to help.
+                            </p>
+                        </div>
+                    </div>
 
-                                    <p class="mt-4">
-                                        You can join by signing up on
-                                        <a
-                                            href="https://discord.gg/Fqf5uvj3NG"
-                                            target="_blank"
-                                            class="
-                                                font-bold
-                                                text-red-800
-                                                hover:text-red-700
-                                            "
-                                            >this Discord server</a
-                                        >.
-                                    </p>
-                                </dd>
-                            </div>
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">
+                                I've never done anything with web3. Can I still join?
+                            </h3>
 
-                            <!-- More questions... -->
-                        </dl>
+                            <p class="mt-4">Again, yes!</p>
+
+                            <p class="mt-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio esse accusamus
+                                tempora incidunt itaque dolores laborum inventore deserunt dolore. Sit obcaecati sint
+                                quasi ad aspernatur ab. Iusto, consequatur voluptatibus?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">Do I need to pay to become a member?</h3>
+
+                            <p class="mt-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio esse accusamus
+                                tempora incidunt itaque dolores laborum inventore deserunt dolore. Sit obcaecati sint
+                                quasi ad aspernatur ab. Iusto, consequatur voluptatibus?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">Another question</h3>
+
+                            <p class="mt-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, odio esse accusamus
+                                tempora incidunt itaque dolores laborum inventore deserunt dolore. Sit obcaecati sint
+                                quasi ad aspernatur ab. Iusto, consequatur voluptatibus?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="py-10 px-9">
+                            <h3 class="text-2xl font-extrabold text-black">How can I join?</h3>
+
+                            <p class="mt-4">
+                                We are still accepting founder members, and we are planning to recognize them as soon as
+                                we finish working on our ownership and governance token.
+                            </p>
+
+                            <p class="mt-4">
+                                You can join by signing up on this
+                                <a
+                                    href="https://discord.gg/Fqf5uvj3NG"
+                                    class="font-bold text-pink-700 hover:text-pink-800"
+                                    >Discord server</a
+                                >.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-        <footer class="bg-gray-800 text-center" aria-labelledby="footer-heading">
-            <h2 id="footer-heading" class="sr-only">Footer</h2>
-            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-                <div class="text-gray-200 text-lg">
-                    Our community is fully owned and governed by its members. We believe
-                    our strength is our diversity, and we embrace all levels of
-                    experience and knowledge, race, ethnicity, gender, sexual
-                    orientation, and socio-economic background.
-                </div>
-                <div class="mt-8 border-t border-gray-700 pt-8 m-auto text-center">
-                    <div class="flex space-x-6 md:order-2 text-center">
-                        <a
-                            href="https://twitter.com/underfitted"
-                            class="text-gray-400 hover:text-gray-300"
-                        >
-                            <span class="sr-only">Twitter</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                                />
-                            </svg>
-                        </a>
+        </section>
 
-                        <a
-                            href="https://github.com/underfitted"
-                            class="text-gray-400 hover:text-gray-300"
-                        >
-                            <span class="sr-only">GitHub</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                    clip-rule="evenodd"
-                                />
-                            </svg>
-                        </a>
+        <footer class="py-8 bg-gray-900">
+            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                <p class="text-gray-200 text-center">
+                    Our community is fully owned and governed by its members. We believe our strength is our diversity,
+                    and we embrace all levels of experience and knowledge, race, ethnicity, gender, sexual orientation,
+                    and socio-economic background.
+                </p>
 
-                        <a
-                            href="https://discord.gg/Fqf5uvj3NG"
-                            class="text-gray-400 hover:text-gray-300"
-                        >
-                            <span class="sr-only">Discord</span>
-                            <svg
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
+                <hr class="my-6 border-gray-800" />
+
+                <div class="flex flex-wrap items-center justify-between">
+                    <ul class="flex items-center space-x-3 md:order-3 mx-auto">
+                        <li>
+                            <a
+                                href="https://twitter.com/underfittedio"
+                                title=""
+                                class="
+                                    flex
+                                    items-center
+                                    justify-center
+                                    text-white
+                                    transition-all
+                                    duration-200
+                                    bg-transparent
+                                    border border-gray-700
+                                    rounded-full
+                                    w-10
+                                    h-10
+                                    focus:bg-pink-700
+                                    hover:bg-pink-700 hover:border-pink-700
+                                    focus:border-pink-700
+                                "
                             >
-                                <path
-                                    d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"
-                                />
-                            </svg>
-                        </a>
-                    </div>
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://github.com/underfitted"
+                                title=""
+                                class="
+                                    flex
+                                    items-center
+                                    justify-center
+                                    text-white
+                                    transition-all
+                                    duration-200
+                                    bg-transparent
+                                    border border-gray-700
+                                    rounded-full
+                                    w-10
+                                    h-10
+                                    focus:bg-pink-700
+                                    hover:bg-pink-700 hover:border-pink-700
+                                    focus:border-pink-700
+                                "
+                            >
+                                <svg
+                                    class="w-6 h-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://discord.gg/Fqf5uvj3NG"
+                                title=""
+                                class="
+                                    flex
+                                    items-center
+                                    justify-center
+                                    text-white
+                                    transition-all
+                                    duration-200
+                                    bg-transparent
+                                    border border-gray-700
+                                    rounded-full
+                                    w-10
+                                    h-10
+                                    focus:bg-pink-700
+                                    hover:bg-pink-700 hover:border-pink-700
+                                    focus:border-pink-700
+                                "
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 127.14 96.36"
+                                    fill="#fff"
+                                    class="w-6 h-6"
+                                >
+                                    <g>
+                                        <g id="Discord_Logos" data-name="Discord Logos">
+                                            <g
+                                                id="Discord_Logo_-_Large_-_White"
+                                                data-name="Discord Logo - Large - White"
+                                            >
+                                                <path
+                                                    d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"
+                                                />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>
