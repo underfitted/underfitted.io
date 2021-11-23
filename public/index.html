@@ -29,9 +29,35 @@
         <link href="css/tailwind.css" rel="stylesheet" />
 
         <script defer data-domain="underfitted.io" src="https://plausible.io/js/plausible.js"></script>
+        <script src="./web3.min.js"></script>
     </head>
 
     <body class="bg-gray-50">
+        <script>
+            var web3 = new Web3(Web3.givenProvider || "ws://localhost:8546");
+
+            web3.eth.defaultAccount = web3.eth.getAccounts()[0];
+
+            var mintContract = new web3.eth.Contract([{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"account","type":"address"}],"name":"Paused","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"account","type":"address"}],"name":"Unpaused","type":"event"},{"inputs":[],"name":"MAX_SUPPLY","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"_totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"}],"name":"mint","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"pause","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"paused","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"unpause","outputs":[],"stateMutability":"nonpayable","type":"function"}],
+                "0xe9A512eFFD43c6a375086933D4b2c99EaE685FCB", {
+                from: web3.eth.defaultAccount, 
+                gasPrice: '20000000000'
+            });
+
+            mintContract.methods.MAX_SUPPLY().call().then(function(max_supply_of_tokens) {
+                document.getElementById("max_supply_of_tokens").innerHTML = max_supply_of_tokens;
+               
+                mintContract.methods._totalSupply().call().then(function(total_supply) {
+                    document.getElementById("currently_minted_tokens").innerHTML = total_supply - 1;
+                   
+                    if (max_supply_of_tokens < total_supply) {
+                        document.getElementById("mint-button").style.display = "none";
+                        document.getElementById("sold_out_banner").style.display = "block";
+                    }
+                });
+            });
+        </script>
+
         <!-- Firebase -->
         <script src="/__/firebase/8.2.5/firebase-app.js"></script>
         <script src="/__/firebase/8.2.5/firebase-analytics.js"></script>
@@ -128,6 +154,53 @@
                     The central piece of our plan is to build a group of Decentralized Autonomous Organizations (DAO)
                     around specific projects, allowing individual members to contribute while self-governing with
                     unparalleled levels of autonomy.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-10 bg-gray-50 sm:py-16">
+            <div class="px-4 mx-auto max-w-5xl sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-xs font-semibold tracking-widest uppercase text-blue-600">
+                        Become a member today!
+                    </p>
+
+                    <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+                        Mint your membership token
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-gray-600">
+                        Connect your MetaMask wallet and mint your membership token to join the DAO.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a
+                        id="mint-button"
+                        href="#"
+                        title="Mint your membership token"
+                        class="
+                            inline-block
+                            mt-12
+                            text-center
+                            px-10
+                            py-4
+                            font-semibold
+                            text-white
+                            rounded-md
+                            bg-gradient-to-br
+                            from-pink-600
+                            to-blue-600
+                            hover:from-pink-700 hover:to-blue-700
+                        "
+                        role="button"
+                        target="_blank">
+                        Mint your token
+                </a>
+                <p id="sold_out_banner" class="mt-4 text-lg font-bold hidden">
+                    Memberships are currently sold out.
+                </p>
+                <p class="mt-4 text-gray-500">
+                    Minted tokens: <span id="currently_minted_tokens"></span> out of <span id="max_supply_of_tokens"></span>
                 </p>
             </div>
         </section>
@@ -477,5 +550,6 @@
                 </div>
             </div>
         </footer>
+
     </body>
 </html>
