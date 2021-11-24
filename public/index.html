@@ -46,15 +46,12 @@
             </div>
 
             <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                <div class="text-center md:w-2/3 mx-auto">
-                    <h1 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-6xl">
+                <div class="text-center mx-auto">
+                    <h1 class="text-7xl font-bold leading-tight text-black sm:text-7xl lg:text-7xl">
                         Underfitted Social Club
                     </h1>
-                    <p class="mt-4 text-xl text-gray-800">A community of people passionate about machine learning.</p>
-                    <p class="mt-4 text-xl text-gray-800">
-                        Our mission is to <strong>decentralize</strong> the machine learning field, enabling
-                        <strong>individuals</strong> to <strong>contribute, make an impact</strong>, and
-                        <strong>directly benefit</strong> from their contributions.
+                    <p class="mt-4 text-2xl text-gray-700 font-bold">
+                        A decentralized community working to make machine learning accessible to every one.
                     </p>
 
                     <a
@@ -63,7 +60,7 @@
                         class="
                             inline-block
                             mt-12
-                            text-center
+                            text-2xl text-center
                             px-10
                             py-4
                             font-semibold
@@ -96,66 +93,32 @@
             </div>
         </section>
 
-        <section class="text-lg text-gray-700 bg-gray-50 py-4 px-2 md:px-10">
-            <div
-                class="
-                    mt-6
-                    mx-auto
-                    p-4
-                    md:p-8
-                    bg-white
-                    max-w-5xl
-                    rounded-md
-                    lg:rounded-xl
-                    shadow-lg
-                    border-purple-800 border-solid border-2
-                ">
-                <h2 class="uppercase text-blue-600 text-xs font-semibold tracking-widest">Achieving our mission</h2>
-
-                <h3 class="text-3xl font-bold pt-6">We have 3 fundamental believes:</h3>
-                <ol class="list-decimal pl-12">
-                    <li class="mt-4">Machine learning education should be accessible to everybody.</li>
-                    <li class="mt-4">
-                        Decentralized communities are vital to empowering and amplifying individual voices.
-                    </li>
-                    <li class="mt-4">
-                        Individuals should benefit directly from their contributions regardless of credentials,
-                        affiliation, or background.
-                    </li>
-                </ol>
-
-                <p class="mt-8">
-                    The central piece of our plan is to build a group of Decentralized Autonomous Organizations (DAO)
-                    around specific projects, allowing individual members to contribute while self-governing with
-                    unparalleled levels of autonomy.
-                </p>
-            </div>
-        </section>
-
         <section class="py-10 bg-gray-50 sm:py-16">
             <div class="px-4 mx-auto max-w-5xl sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto text-center">
-                    <p class="text-xs font-semibold tracking-widest uppercase text-blue-600">
-                        Become a member today!
-                    </p>
+                    <p class="text-base font-semibold tracking-widest uppercase text-blue-600">What's going on?</p>
 
-                    <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-                        Mint your membership token
+                    <h2 class="mt-6 text-6xl font-bold leading-tight text-black sm:text-5xl lg:text-6xl">
+                        We are building things!
                     </h2>
-                    <p class="mt-4 text-base leading-relaxed text-gray-600">
-                        Connect your MetaMask wallet and mint your membership token to join the DAO.
+                    <p class="mt-4 text-2xl leading-relaxed text-gray-600">
+                        We are incubating projects as individual Decentralized Autonomous Organizations, each of them fully
+                        governed and owned by the community.
                     </p>
-                </div>
-            </div>
-            <div class="text-center">
-                <button
+                    <p class="mt-8 text-2xl leading-relaxed text-gray-800">
+                        We are starting with <strong>bnomial</strong>, a decentralized machine learning assessment platform.
+                    </p>
+                    <p class="mt-8 text-2xl leading-relaxed text-gray-600">
+                        As we pick up steam, we will be listing every new project here.
+                    </p>
+                    <button
                         id="connect-button"
                         href="#"
-                        title="Connect wallet"
+                        title="Connect your wallet"
                         class="
                             inline-block
                             mt-12
-                            text-center
+                            text-center text-2xl
                             px-10
                             py-4
                             font-semibold
@@ -166,14 +129,14 @@
                             to-blue-600
                             hover:from-pink-700 hover:to-blue-700
                         ">
-                        Connect wallet</span>
-            </button>
-                <button
+                        Wanna help? Connect your wallet
+                    </button>
+                    <button
                         id="mint-button"
                         title="Mint your membership token"
                         class="
                             hidden
-                            inline-block
+                            text-2xl
                             mt-12
                             text-center
                             px-10
@@ -186,113 +149,15 @@
                             to-blue-600
                             hover:from-pink-700 hover:to-blue-700
                         ">
-                        Mint membership token for <span id="membership_cost">45</span> MATIC
-            </button>
-                <p id="sold-out-banner" class="mt-4 text-lg font-bold hidden">
-                    Memberships are currently sold out.
-                </p>
-                <p id="minted-tokens" class="mt-4 text-gray-500 hidden">
-                    Minted tokens: <span id="currently_minted_tokens"></span> out of <span id="max_supply_of_tokens"></span>
-                </p>
-            </div>
-        </section>
-
-        <section class="py-10 bg-gray-50 sm:py-16">
-            <div class="px-4 mx-auto max-w-5xl sm:px-6 lg:px-8">
-                <div class="max-w-4xl mx-auto text-center">
-                    <p class="text-xs font-semibold tracking-widest uppercase text-blue-600">
-                        What's happening right now?
+                        Mint your membership token
+                    </button>
+                    <p id="sold-out-banner" class="mt-4 text-lg font-bold hidden">
+                        Memberships are currently sold out.
                     </p>
-
-                    <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-                        We are building our first project!
-                    </h2>
-                    <p class="mt-4 text-base leading-relaxed text-gray-600">
-                        A place where people can evaluate their machine learning skills, learn, and push their careers to
-                        the next level.
+                    <p id="minted-tokens" class="mt-4 text-gray-500 hidden">
+                        Minted tokens: <span id="currently_minted_tokens"></span> out of
+                        <span id="max_supply_of_tokens"></span>
                     </p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 lg:mt-20 lg:gap-x-12 text-base text-gray-600">
-                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
-                        <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">Our first project</h3>
-                            <p class="mt-4">
-                                A self-governed, community-led online platform to evaluate machine learning skills. 
-                            </p>
-
-                            <ul class="list-disc list-outside ml-4">
-                                <li class="mt-3">Our mission is to become a trusted authority for users to learn, and gauge their understanding and experience of the field.</li>
-                                <li class="mt-3">
-                                    Autonomous and decentralized. Everyone contributes and decide where the project
-                                    goes.
-                                </li>
-                                <li class="mt-3">
-                                    Built on top of bleeding edge technology, giving you an opportunity to grow.
-                                </li>
-                            </ul>
-
-                            <p class="text-center">
-                                <a
-                                    href="https://discord.gg/Fqf5uvj3NG"
-                                    title="Underfitted Scoial Club Discord server"
-                                    class="
-                                        inline-block
-                                        mt-8
-                                        text-center
-                                        px-10
-                                        py-4
-                                        font-semibold
-                                        text-white
-                                        rounded-md
-                                        bg-gradient-to-br
-                                        from-pink-600
-                                        to-blue-600
-                                        hover:from-pink-700 hover:to-blue-700
-                                    "
-                                    role="button"
-                                    target="_blank">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 127.14 96.36"
-                                        fill="#fff"
-                                        class="inline w-8 mr-3">
-                                        <g>
-                                            <g id="Discord_Logos" data-name="Discord Logos">
-                                                <g
-                                                    id="Discord_Logo_-_Large_-_White"
-                                                    data-name="Discord Logo - Large - White">
-                                                    <path
-                                                        d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                    Join our Project
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
-                        <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">Governance token</h3>
-
-                            <p class="mt-4">
-                                A fundamental piece of our vision is a system to financially reward members
-                                proportionally to their contributions to the community.
-                            </p>
-
-                            <p class="mt-3">We are also working on this.</p>
-
-                            <p class="mt-3">Our plan is to use a crypto token as the central piece of this system.</p>
-
-                            <p class="mt-3">
-                                To increase the value of this token over time, we are planning to offer to the public
-                                different services built by the community.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -303,7 +168,7 @@
                     <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                         Frequently Asked Questions
                     </h2>
-                    <p class="mt-4 text-base leading-relaxed text-gray-600">
+                    <p class="mt-4 text-2xl leading-relaxed text-gray-600">
                         We don't have all the answers, but we do have some.
                     </p>
                 </div>
@@ -312,7 +177,8 @@
                     class="
                         grid grid-cols-1
                         md:grid-cols-2
-                        lg:grid-cols-3
+                        lg:grid-cols-2
+                        text-2xl
                         gap-5
                         mt-12
                         lg:mt-20
@@ -321,99 +187,43 @@
                     ">
                     <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
                         <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">Why is this a DAO?</h3>
+                            <h3 class="text-3xl font-extrabold text-black">Why is this a DAO?</h3>
 
                             <p class="mt-4">Because we want the community to be owned and governed by its members.</p>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="p-6 lg:p-10">
+                            <h3 class="text-3xl font-extrabold text-black">Do I need any experience?</h3>
+
+                            <p class="mt-4">In short: no, you don't.</p>
+
+                            <p class="mt-4">One of our goals is to help you learn and build a name for yourself.</p>
+                        </div>
+                    </div>
+
+                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
+                        <div class="p-6 lg:p-10">
+                            <h3 class="text-3xl font-extrabold text-black">Is this a web3 thing?</h3>
+
+                            <p class="mt-4">Yes, it is.</p>
+
                             <p class="mt-4">
-                                In a Decentralized Autonomous Organization (<a
-                                    href="https://ethereum.org/en/dao/"
-                                    class="font-bold text-pink-700 hover:text-pink-800"
-                                    target="_blank"
-                                    >DAO</a
-                                >) the members decide how the community will develop, what projects should be built and
-                                how the proceeds will be distributed.
+                                But don't worry if you aren't familiar with it yet. We'll take care of that.
                             </p>
                         </div>
                     </div>
 
                     <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
                         <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">
-                                I don't know much about machine learning. Can I still join?
-                            </h3>
+                            <h3 class="text-3xl font-extrabold text-black">Is this free?</h3>
 
-                            <p class="mt-4">Absolutely!</p>
+                            <p class="mt-4">You can join the community for free.</p>
 
                             <p class="mt-4">
-                                Not only is this community the perfect place to get started with machine learning, but
-                                we are also looking for passionate people from different backgrounds and experiences
-                                willing to help.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
-                        <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">
-                                I've never done anything with web3. Can I still join?
-                            </h3>
-
-                            <p class="mt-4">Again, yes!</p>
-
-                            <p class="mt-4">
-                                We are in the early days of web3 and we are still figuring out a lot of stuff. We need
-                                people that learn together with us and help us build the community.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
-                        <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">Do I need to pay to become a member?</h3>
-
-                            <p class="mt-4">
-                                You will need to own the community token in order to become a full member.
-                            </p>
-
-                            <p class="mt-4">
-                                Soon, you will be able to either buy it or make a valuabe contribution to the community
-                                to earn it. More details on this soon!
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
-                        <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">Why should I join?</h3>
-
-                            <p class="mt-4">
-                                While we want to make most of the things we build publicly available, there will be some
-                                benefits accessible only to members. 
-                            </p>
-                            <p class="mt-4"></p>    
-                                For example private Discord channels, member-only
-                                events and possibility to earn tokens with your contributions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
-                        <div class="p-6 lg:p-10">
-                            <h3 class="text-2xl font-extrabold text-black">How can I join?</h3>
-
-                            <p class="mt-4">
-                                We are still accepting founder members, and we are planning to recognize them as soon as
-                                we finish working on our ownership and governance token.
-                            </p>
-
-                            <p class="mt-4">
-                                You can join by signing up on this
-                                <a
-                                    href="https://discord.gg/Fqf5uvj3NG"
-                                    class="font-bold text-pink-700 hover:text-pink-800"
-                                    target="_blank"
-                                    >Discord server</a
-                                >.
+                                There are member-only areas for which you need a membership access, but everything else
+                                is free.
                             </p>
                         </div>
                     </div>
@@ -422,7 +232,7 @@
         </section>
 
         <footer class="py-8 bg-gray-900">
-            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl text-2xl">
                 <p class="text-gray-200 text-center">
                     Our community is fully owned and governed by its members. We believe our strength is our diversity,
                     and we embrace all levels of experience and knowledge, race, ethnicity, gender, sexual orientation,
@@ -545,6 +355,5 @@
 
         <script src="js/web3.min.js"></script>
         <script src="js/mint.js"></script>
-
     </body>
 </html>
