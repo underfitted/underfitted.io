@@ -135,65 +135,135 @@
         <section class="py-10 bg-gray-50 sm:py-16">
             <div class="px-4 mx-auto max-w-5xl sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto text-center">
-                    <p class="text-xs font-semibold tracking-widest uppercase text-blue-600">
-                        Become a member today!
-                    </p>
+                    <p class="text-xs font-semibold tracking-widest uppercase text-blue-600">Become a member today!</p>
 
                     <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                         Mint your membership token
                     </h2>
-                    <p class="mt-4 text-base leading-relaxed text-gray-600">
-                        Connect your MetaMask wallet and mint your membership token to join the DAO.
-                    </p>
+
+                    <div id="connect-wallet-stage" class="">
+                        <p class="mt-4 text-base leading-relaxed text-gray-600 max-w-2xl mx-auto">
+                            Connect your MetaMask wallet and mint your membership token for free to join the DAO.
+                        </p>
+
+                        <button
+                            id="connect-wallet-button"
+                            href="#"
+                            title="Connect wallet"
+                            class="
+                                inline-block
+                                mt-12
+                                text-center
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Connect wallet
+                        </button>
+                    </div>
+
+                    <div id="switch-network-stage" class="hidden">
+                        <p class="mt-4 text-base leading-relaxed text-gray-600 max-w-2xl mx-auto">
+                            The Underfitted Social Club NFT is available on the Polygon network. Please switch the
+                            network in your MetaMask wallet to the Polygon network.
+                        </p>
+
+                        <button
+                            id="switch-network-button"
+                            href="#"
+                            title="Connect wallet"
+                            class="
+                                inline-block
+                                mt-12
+                                text-center
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Switch to Polygon
+                        </button>
+                    </div>
+
+                    <div id="mint-stage" class="hidden">
+                        <p class="mt-4 text-base leading-relaxed text-gray-600 max-w-2xl mx-auto">
+                            Click the button below and confirm the transaction in your MetaMask wallet to mint your
+                            membership token. The token is free, but you will need to pay a small network tranction fee.
+                        </p>
+
+                        <button
+                            id="mint-button"
+                            title="Mint your membership token"
+                            class="
+                                inline-block
+                                mt-12
+                                text-center
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Mint membership token
+                        </button>
+
+                        <div
+                            id="mint-success-message"
+                            class="
+                                mt-12
+                                bg-green-50
+                                border border-green-700
+                                rounded-xl
+                                w-64
+                                mx-auto
+                                text-green-700
+                                p-4
+                                hidden
+                            ">
+                            Token minted successfully
+                        </div>
+
+                        <div
+                            id="mint-fail-message"
+                            class="
+                                mt-12
+                                bg-red-50
+                                border border-red-700
+                                rounded-xl
+                                w-64
+                                mx-auto
+                                text-red-700
+                                p-4
+                                hidden
+                            ">
+                            Mint failed
+                        </div>
+
+                        <p class="mt-4 text-gray-500">
+                            Minted tokens: <span id="currently-minted-tokens">10</span> out of
+                            <span id="max-token-supply">10</span>
+                        </p>
+                    </div>
+
+                    <div id="mint-closed-stage" class="hidden">
+                        <p class="mt-4 text-xl font-bold pt-6 text-gray-600">Memberships are currently sold out.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="text-center">
-                <button
-                        id="connect-button"
-                        href="#"
-                        title="Connect wallet"
-                        class="
-                            inline-block
-                            mt-12
-                            text-center
-                            px-10
-                            py-4
-                            font-semibold
-                            text-white
-                            rounded-md
-                            bg-gradient-to-br
-                            from-pink-600
-                            to-blue-600
-                            hover:from-pink-700 hover:to-blue-700
-                        ">
-                        Connect wallet</span>
-            </button>
-                <button
-                        id="mint-button"
-                        title="Mint your membership token"
-                        class="
-                            hidden
-                            inline-block
-                            mt-12
-                            text-center
-                            px-10
-                            py-4
-                            font-semibold
-                            text-white
-                            rounded-md
-                            bg-gradient-to-br
-                            from-pink-600
-                            to-blue-600
-                            hover:from-pink-700 hover:to-blue-700
-                        ">
-                        Mint membership token for <span id="membership_cost">45</span> MATIC
-            </button>
-                <p id="sold-out-banner" class="mt-4 text-lg font-bold hidden">
-                    Memberships are currently sold out.
-                </p>
-                <p id="minted-tokens" class="mt-4 text-gray-500 hidden">
-                    Minted tokens: <span id="currently_minted_tokens"></span> out of <span id="max_supply_of_tokens"></span>
-                </p>
             </div>
         </section>
 
@@ -208,8 +278,8 @@
                         We are building our first project!
                     </h2>
                     <p class="mt-4 text-base leading-relaxed text-gray-600">
-                        A place where people can evaluate their machine learning skills, learn, and push their careers to
-                        the next level.
+                        A place where people can evaluate their machine learning skills, learn, and push their careers
+                        to the next level.
                     </p>
                 </div>
 
@@ -218,11 +288,14 @@
                         <div class="p-6 lg:p-10">
                             <h3 class="text-2xl font-extrabold text-black">Our first project</h3>
                             <p class="mt-4">
-                                A self-governed, community-led online platform to evaluate machine learning skills. 
+                                A self-governed, community-led online platform to evaluate machine learning skills.
                             </p>
 
                             <ul class="list-disc list-outside ml-4">
-                                <li class="mt-3">Our mission is to become a trusted authority for users to learn, and gauge their understanding and experience of the field.</li>
+                                <li class="mt-3">
+                                    Our mission is to become a trusted authority for users to learn, and gauge their
+                                    understanding and experience of the field.
+                                </li>
                                 <li class="mt-3">
                                     Autonomous and decentralized. Everyone contributes and decide where the project
                                     goes.
@@ -388,11 +461,11 @@
 
                             <p class="mt-4">
                                 While we want to make most of the things we build publicly available, there will be some
-                                benefits accessible only to members. 
+                                benefits accessible only to members.
                             </p>
-                            <p class="mt-4"></p>    
-                                For example private Discord channels, member-only
-                                events and possibility to earn tokens with your contributions.
+                            <p class="mt-4">
+                                For example private Discord channels, member-only events and possibility to earn tokens
+                                with your contributions.
                             </p>
                         </div>
                     </div>
@@ -545,6 +618,5 @@
 
         <script src="js/web3.min.js"></script>
         <script src="js/mint.js"></script>
-
     </body>
 </html>
