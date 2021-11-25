@@ -102,62 +102,126 @@
                         We are building things!
                     </h2>
                     <p class="mt-4 text-2xl leading-relaxed text-gray-600">
-                        We are incubating projects as individual Decentralized Autonomous Organizations, each of them fully
-                        governed and owned by the community.
+                        We are incubating projects as individual Decentralized Autonomous Organizations, each of them
+                        fully governed and owned by the community.
                     </p>
-                    <p class="mt-8 text-2xl leading-relaxed text-gray-800">
-                        We are starting with <strong>bnomial</strong>, a decentralized machine learning assessment platform.
+                    <p class="mt-8 text-3xl leading-relaxed text-gray-800">
+                        We are starting with <strong>bnomial</strong>, a decentralized machine learning assessment
+                        platform.
                     </p>
                     <p class="mt-8 text-2xl leading-relaxed text-gray-600">
                         As we pick up steam, we will be listing every new project here.
                     </p>
-                    <button
-                        id="connect-button"
-                        href="#"
-                        title="Connect your wallet"
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 bg-gray-50 sm:py-16">
+            <div class="px-4 mx-auto max-w-5xl sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center bg-blue-100 p-20">
+                    <h2
+                        id="membership-sale-status"
                         class="
-                            inline-block
-                            mt-12
-                            text-center text-2xl
-                            px-10
-                            py-4
-                            font-semibold
-                            text-white
-                            rounded-md
-                            bg-gradient-to-br
-                            from-pink-600
-                            to-blue-600
-                            hover:from-pink-700 hover:to-blue-700
-                        ">
-                        Wanna help? Connect your wallet
-                    </button>
-                    <button
-                        id="mint-button"
-                        title="Mint your membership token"
-                        class="
-                            hidden
-                            text-2xl
-                            mt-12
-                            text-center
-                            px-10
-                            py-4
-                            font-semibold
-                            text-white
-                            rounded-md
-                            bg-gradient-to-br
-                            from-pink-600
-                            to-blue-600
-                            hover:from-pink-700 hover:to-blue-700
-                        ">
-                        Mint your membership token
-                    </button>
-                    <p id="sold-out-banner" class="mt-4 text-lg font-bold hidden">
-                        Memberships are currently sold out.
+                            text-6xl
+                            leading-snug
+                            font-bold
+                            text-black
+                            sm:text-5xl sm:leading-snug
+                            lg:text-6xl lg:leading-snug
+                        "></h2>
+                    <p id="membership-description" class="mt-4 text-2xl leading-relaxed text-gray-600 hidden">
+                        TBD
                     </p>
-                    <p id="minted-tokens" class="mt-4 text-gray-500 hidden">
-                        Minted tokens: <span id="currently_minted_tokens"></span> out of
-                        <span id="max_supply_of_tokens"></span>
+                    <p id="error-message" class="mt-4 text-2xl leading-relaxed text-gray-600 hidden">
+                        To get a membership, you need to install MetaMask and
+                        <a
+                            href="https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/"
+                            class="text-blue-600"
+                            >connect it to the Polygon network</a
+                        >. You can then come back and refresh the page.
                     </p>
+                    <div id="connect-wallet-stage" class="hidden">
+                        <button
+                            id="connect-wallet-button"
+                            href="#"
+                            title="Connect wallet"
+                            class="
+                                inline-block
+                                mt-12
+                                text-2xl text-center
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Connect your MetaMask wallet
+                        </button>
+                    </div>
+
+                    <div id="switch-network-stage" class="hidden">
+                        <button
+                            id="switch-network-button"
+                            href="#"
+                            title="Connect wallet"
+                            class="
+                                inline-block
+                                mt-12
+                                text-2xl text-center
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Switch your wallet to the Polygon network
+                        </button>
+                    </div>
+
+                    <div id="mint-stage" class="hidden">
+                        <button
+                            id="mint-button"
+                            title="Mint your membership token"
+                            class="
+                                inline-block
+                                mt-12
+                                text-center text-2xl
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Mint your membership token!
+                        </button>
+
+                        <div id="mint-fail-message" class="mt-4 text-xl mx-auto text-red-700 p-4 hidden">
+                            There was a problem minting your token. Please, try again.
+                        </div>
+
+                        <div
+                            id="mint-success-message"
+                            class="mt-12 text-2xl rounded-xl w-128 mx-auto text-green-700 p-4 font-bold hidden">
+                            Congrats! Your membership was successfully minted!
+                        </div>
+
+                        <p class="mt-4 text-gray-500 text-xl">
+                            Minted tokens: <span id="currently-minted-tokens">10</span> out of
+                            <span id="max-token-supply">10</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -183,7 +247,7 @@
                         mt-12
                         lg:mt-20
                         xl:gap-x-12
-                        text-base text-gray-600
+                        text-gray-600
                     ">
                     <div class="transition-all duration-200 bg-white hover:shadow-xl shadow-md">
                         <div class="p-6 lg:p-10">
