@@ -47,7 +47,7 @@ async function callMint() {
 
     const currentPrice = await contract.methods.getPrice().call()
 
-    return contract.methods.mint().send({ from: window.web3.currentProvider.selectedAddress, value: currentPrice })
+    return contract.methods.mint().send({ from: window.ethereum.selectedAddress, value: currentPrice })
 }
 
 function showMintStage() {
@@ -78,7 +78,7 @@ function showMintClosedStage() {
 function showConnectWalletStage() {
     document.getElementById('membership-sale-status').classList.add('hidden')
     document.getElementById('membership-description').innerHTML =
-        'Connect your MetaMask wallet to the Polygon network so we can verify whether there are any memberships available.'
+        'Connect your wallet to the Polygon network so we can verify if there are any memberships available.'
     document.getElementById('membership-description').classList.remove('hidden')
     document.getElementById('connect-wallet-stage').classList.remove('hidden')
 }
@@ -96,7 +96,7 @@ function showMembershipsAreOpenMessage() {
     document.getElementById('membership-sale-status').classList.remove('hidden')
 
     document.getElementById('membership-description').innerHTML =
-        'Memberships are currently open to the public! You can join the community by minting your membership token here.'
+        'The 1,000 founding memberships are still open! You can become a member by minting your card here.'
     document.getElementById('membership-description').classList.remove('hidden')
 }
 
@@ -134,11 +134,11 @@ function restoreMintButton() {
 }
 
 function isEthereumWalletConnected() {
-    return window.web3.currentProvider && window.web3.currentProvider.selectedAddress != null
+    return window.ethereum && window.ethereum.selectedAddress != null
 }
 
 function isRightNetworkSelected() {
-    return window.web3.currentProvider.chainId == CHAIN.id
+    return window.ethereum.chainId == CHAIN.id
 }
 
 function selectStage() {
@@ -159,7 +159,7 @@ function selectStage() {
     }
 }
 
-function selectStageAfterMetaMaskUpdatesNetwork() {
+function selectStageAfterWalletUpdatesNetwork() {
     setTimeout(selectStage, 1000)
 }
 
@@ -168,24 +168,33 @@ function init() {
 
     // Connect wallet button
     document.getElementById('connect-wallet-button').addEventListener('click', async () => {
-        window.web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546')
-        await window.web3.currentProvider.send('eth_requestAccounts')
-
-        selectStage()
+        if (window.ethereum) {
+            try {
+                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+                window.ethereum.currentAccount = accounts[0]
+                selectStage()
+            } catch (error) {
+                if (error.code === 4001) {
+                    selectStage()
+                }
+            }
+        } else {
+            showErrorMessage()
+        }
     })
 
     // Switch network button
     document.getElementById('switch-network-button').addEventListener('click', async () => {
         try {
-            await window.web3.currentProvider.request({
+            await window.ethereum.request({
                 method: 'wallet_switchEthereumChain',
                 params: [{ chainId: CHAIN.id }],
             })
-            selectStageAfterMetaMaskUpdatesNetwork()
+            selectStageAfterWalletUpdatesNetwork()
         } catch (error) {
             if (error.code === 4902) {
                 try {
-                    await window.web3.currentProvider.request({
+                    await window.ethereum.request({
                         method: 'wallet_addEthereumChain',
                         params: [
                             {
@@ -201,7 +210,7 @@ function init() {
                             },
                         ],
                     })
-                    selectStageAfterMetaMaskUpdatesNetwork()
+                    selectStageAfterWalletUpdatesNetwork()
                 } catch (error) {
                     showErrorMessage()
                 }
