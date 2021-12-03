@@ -91,8 +91,7 @@ async function updateBalanceMessage() {
     if (!(await isBalanceEnough())) {
         document.getElementById('insufficient-balance-message').classList.remove('hidden')
 
-        document.getElementById('mint-button').disabled = true
-        document.getElementById('mint-button').classList.add('cursor-not-allowed', 'opacity-40')
+        document.getElementById('mint-button').classList.add('hidden')
     }
 }
 
@@ -121,7 +120,7 @@ function switchNetworkStage() {
 async function mintOpenStage() {
     updateTokenSupply()
 
-    if (!updateSuccessfulMintMessage()) {
+    if (!(await updateSuccessfulMintMessage())) {
         updateBalanceMessage()
     }
 
@@ -155,7 +154,7 @@ async function selectStage() {
     }
 
     // Stage 3 - mint
-    if (isMintOpen()) {
+    if (await isMintOpen()) {
         mintOpenStage()
         return
     }
@@ -234,8 +233,7 @@ function initMintButton() {
 
         contractMint().then(
             () => {
-                document.getElementById('mint-success-message').classList.remove('hidden')
-                document.getElementById('mint-button').classList.add('hidden')
+                updateSuccessfulMintMessage()
                 selectStage()
             },
             (error) => {

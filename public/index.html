@@ -182,12 +182,35 @@
                             >install the Metamask extension</a
                         >
                         and create a wallet. You can then come back and refresh the page.
+
+                        <span class="text-gray-400 mt-6 text-2xl block">or</span>
+
+                        <a
+                            href="https://svpino.gumroad.com/l/xWIaW"
+                            title="Pay with a credit card"
+                            class="
+                                inline-block
+                                mt-12
+                                text-2xl text-center
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Pay with a credit card
+                        </a>
                     </p>
                 </div>
 
                 <div id="stage-1-connect-wallet" class="hidden">
                     <p class="mt-4 text-2xl leading-relaxed text-gray-400">
-                        Connect your wallet so we can verify if there are any memberships available.
+                        Connect your wallet so we can verify if there are memberships available, or you can simply pay
+                        with a credit card.
                     </p>
                     <button
                         id="connect-wallet-button"
@@ -209,13 +232,35 @@
                         ">
                         Connect your wallet
                     </button>
+
+                    <span class="text-gray-300 mx-4 text-2xl">or</span>
+
+                    <a
+                        href="https://svpino.gumroad.com/l/xWIaW"
+                        title="Pay with a credit card"
+                        class="
+                            inline-block
+                            mt-6
+                            text-2xl text-center
+                            px-10
+                            py-4
+                            font-semibold
+                            text-white
+                            rounded-md
+                            bg-gradient-to-br
+                            from-pink-600
+                            to-blue-600
+                            hover:from-pink-700 hover:to-blue-700
+                        ">
+                        Pay with a credit card
+                    </a>
                 </div>
 
                 <div id="stage-2-switch-network" class="hidden">
                     <p class="mt-4 text-2xl leading-relaxed text-gray-400">
                         You need to connect to the
                         <a href="https://polygon.technology/" class="text-blue-600" target="_blank">Polygon network</a>
-                        where out smart contract is deployed. Your wallet address is the same as on Ethereum network.
+                        where out smart contract is deployed. Your wallet address is the same as on Ethereum.
                     </p>
                     <button
                         id="switch-network-button"
@@ -237,6 +282,28 @@
                         ">
                         Switch wallet to Polygon
                     </button>
+
+                    <span class="text-gray-300 mx-4 text-2xl">or</span>
+
+                    <a
+                        href="https://svpino.gumroad.com/l/xWIaW"
+                        title="Pay with a credit card"
+                        class="
+                            inline-block
+                            mt-6
+                            text-2xl text-center
+                            px-10
+                            py-4
+                            font-semibold
+                            text-white
+                            rounded-md
+                            bg-gradient-to-br
+                            from-pink-600
+                            to-blue-600
+                            hover:from-pink-700 hover:to-blue-700
+                        ">
+                        Pay with a credit card
+                    </a>
                 </div>
 
                 <div id="stage-3-mint-open" class="hidden">
@@ -263,9 +330,28 @@
                     <p id="insufficient-balance-message" class="mt-8 text-red-200 font-semibold text-xl hidden">
                         You don't have enough funds in your wallet to mint. You can buy MATIC on an exchange like
                         <a href="https://www.moonpay.com/buy/matic" target="_blank" class="text-blue-600">MoonPay</a>
-                        or check out our
-                        <a href="https://svpino.gumroad.com/l/xWIaW" target="_blank" class="text-blue-600">Gumroad</a>
-                        product if you simply want to pay with a credit card.
+
+                        <span class="text-gray-300 mx-4 mt-4 text-2xl block">or</span>
+
+                        <a
+                            href="https://svpino.gumroad.com/l/xWIaW"
+                            title="Pay with a credit card"
+                            class="
+                                inline-block
+                                mt-6
+                                text-2xl text-center
+                                px-10
+                                py-4
+                                font-semibold
+                                text-white
+                                rounded-md
+                                bg-gradient-to-br
+                                from-pink-600
+                                to-blue-600
+                                hover:from-pink-700 hover:to-blue-700
+                            ">
+                            Pay with a credit card
+                        </a>
                     </p>
 
                     <button
@@ -289,7 +375,7 @@
                         <span id="mint-button-minting" class="hidden">Minting your membership token...</span>
                     </button>
 
-                    <div id="mint-fail-message" class="mt-4 text-xl mx-auto text-red-700 p-4 hidden">
+                    <div id="mint-fail-message" class="mt-4 text-xl mx-auto font-bold text-red-700 p-4 hidden">
                         There was a problem minting your token. Please, try again.
                     </div>
 
@@ -302,22 +388,24 @@
                         <span id="max-token-supply">10</span>
                     </p>
                 </div>
+
+                <div id="stage-4-mint-closed" class="hidden">
+                    <h2
+                        class="
+                            text-6xl
+                            leading-snug
+                            font-bold
+                            text-white
+                            sm:text-5xl sm:leading-snug
+                            lg:text-6xl lg:leading-snug
+                        ">
+                        Membership tokens are sold out.
+                    </h2>
+                </div>
+            </section>
             </div>
 
-            <div id="stage-4-mint-closed" class="hidden">
-                <h2
-                    class="
-                        text-6xl
-                        leading-snug
-                        font-bold
-                        text-white
-                        sm:text-5xl sm:leading-snug
-                        lg:text-6xl lg:leading-snug
-                    ">
-                    Membership tokens are sold out.
-                </h2>
-            </div>
-        </section>
+            
 
         <section class="mx-auto text-center mt-16 w-full md:w-5/6 md:mt-28 xl:max-w-4xl">
             <h2 class="mt-6 text-3xl md:text-5xl font-bold leading-tight text-white">Frequently Asked Questions</h2>
