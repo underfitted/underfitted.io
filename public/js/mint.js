@@ -39,6 +39,15 @@ async function isMintOpen() {
     return totalSupply < maxSupply
 }
 
+async function isBalanceEnough() {
+    const walletBalance = parseFloat(
+        window.web3.utils.fromWei(await web3.eth.getBalance(web3.currentProvider.selectedAddress))
+    )
+    let { totalSupply, maxSupply, price } = await contractGetSupplyAndPrice()
+
+    return walletBalance > price
+}
+
 async function contractGetSupplyAndPrice() {
     var contract = new window.web3.eth.Contract(JSON.parse(contractJSONInterface), CONTRACT)
 
@@ -46,7 +55,7 @@ async function contractGetSupplyAndPrice() {
 
     const maxSupply = parseInt(supplyAndPrice[0])
     const totalSupply = parseInt(supplyAndPrice[1])
-    const price = parseFloat(supplyAndPrice[2]) / 1e18
+    const price = 5 + parseFloat(window.web3.utils.fromWei(supplyAndPrice[2]))
 
     return { totalSupply, maxSupply, price }
 }
@@ -81,13 +90,17 @@ function switchNetworkStage() {
     document.getElementById('stage-2-switch-network').classList.remove('hidden')
 }
 
+function insufficientBalanceStage() {
+    document.getElementById('stage-3-insufficient-balance').classList.remove('hidden')
+}
+
 async function mintOpenStage() {
     updateTokenSupply()
-    document.getElementById('stage-3-mint-open').classList.remove('hidden')
+    document.getElementById('stage-4-mint-open').classList.remove('hidden')
 }
 
 function mintClosedStage() {
-    document.getElementById('stage-4-mint-closed').classList.remove('hidden')
+    document.getElementById('stage-5-mint-closed').classList.remove('hidden')
 }
 
 async function selectStage() {
@@ -112,13 +125,19 @@ async function selectStage() {
         return
     }
 
-    // Stage 3 - mint
+    // Stage 3 - is balance enough
+    if (!isBalanceEnough()) {
+        insufficientBalanceStage()
+        return
+    }
+
+    // Stage 4 - mint
     if (isMintOpen()) {
         mintOpenStage()
         return
     }
 
-    // Stage 4 - mint closed
+    // Stage 5 - mint closed
     mintClosedStage()
 }
 
