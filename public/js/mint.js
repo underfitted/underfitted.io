@@ -1,7 +1,8 @@
 const contractJSONInterface =
     '[{"inputs":[{"internalType":"address","name":"treasury","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"account","type":"address"}],"name":"Paused","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"account","type":"address"}],"name":"Unpaused","type":"event"},{"inputs":[],"name":"BASE_PRICE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[],"name":"MAX_SUPPLY","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[],"name":"PRICE_FACTOR","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[],"name":"PRICE_STEP","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[],"name":"RESERVED_SUPPLY","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getSupplyAndPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"mint","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"pause","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"paused","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"unpause","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"}]'
 
-const CONTRACT = '0xA1F1a1d644ae2eF075CfaB4416F9350D1cCeD5E6'
+const CONTRACT = '0x2ef019054d6d52d6b09b3d64f0c54a4e279f7fa2'
+// const CONTRACT = '0xA1F1a1d644ae2eF075CfaB4416F9350D1cCeD5E6'
 
 const MUMBAI_CHAIN = {
     id: '0x13881',
@@ -25,114 +26,6 @@ const POLYGON_CHAIN = {
 
 const CHAIN = MUMBAI_CHAIN
 
-async function updateTokenSupply() {
-    var contract = new window.web3.eth.Contract(JSON.parse(contractJSONInterface), CONTRACT)
-
-    const supplyAndPrice = await contract.methods.getSupplyAndPrice().call()
-    const maxSupply = parseInt(supplyAndPrice[0])
-    const totalSupply = parseInt(supplyAndPrice[1])
-    const price = parseFloat(supplyAndPrice[2]) / 1e18
-
-    document.getElementById('max-token-supply').innerHTML = maxSupply
-    document.getElementById('currently-minted-tokens').innerHTML = totalSupply
-
-    if (price == 0) document.getElementById('current-price').innerHTML = 'free'
-    else document.getElementById('current-price').innerHTML = price + ' MATIC'
-
-    return { totalSupply, maxSupply }
-}
-
-async function callMint() {
-    var contract = new window.web3.eth.Contract(JSON.parse(contractJSONInterface), CONTRACT)
-
-    const currentPrice = await contract.methods.getPrice().call()
-
-    return contract.methods.mint().send({ from: window.ethereum.selectedAddress, value: currentPrice })
-}
-
-function showMintStage() {
-    document.getElementById('connect-wallet-stage').classList.add('hidden')
-    document.getElementById('switch-network-stage').classList.add('hidden')
-
-    updateTokenSupply().then((result) => {
-        let { total_supply, max_supply_of_tokens } = result
-
-        if (total_supply >= max_supply_of_tokens) {
-            showMintClosedStage()
-        } else {
-            showMintOpenStage()
-        }
-    })
-}
-
-function showMintOpenStage() {
-    showMembershipsAreOpenMessage()
-    document.getElementById('mint-stage').classList.remove('hidden')
-}
-
-function showMintClosedStage() {
-    showMembershipsSoldOutMessage()
-    document.getElementById('mint-stage').classList.add('hidden')
-}
-
-function showConnectWalletStage() {
-    document.getElementById('membership-sale-status').classList.add('hidden')
-    document.getElementById('membership-description').innerHTML =
-        'Connect your wallet to the Polygon network so we can verify if there are any memberships available.'
-    document.getElementById('membership-description').classList.remove('hidden')
-    document.getElementById('connect-wallet-stage').classList.remove('hidden')
-}
-
-function showSwitchNetworkStage() {
-    showMembershipsAreOpenMessage()
-    document.getElementById('connect-wallet-stage').classList.add('hidden')
-    document.getElementById('switch-network-stage').classList.remove('hidden')
-}
-
-function showMembershipsAreOpenMessage() {
-    document.getElementById('error-message').classList.add('hidden')
-
-    document.getElementById('membership-sale-status').innerHTML = 'Memberships are open!'
-    document.getElementById('membership-sale-status').classList.remove('hidden')
-
-    document.getElementById('membership-description').innerHTML =
-        'The 1,000 founding memberships are still open! You can become a member by minting your card here.'
-    document.getElementById('membership-description').classList.remove('hidden')
-}
-
-function showMembershipsSoldOutMessage() {
-    document.getElementById('error-message').classList.add('hidden')
-    document.getElementById('membership-description').classList.add('hidden')
-
-    document.getElementById('membership-sale-status').innerHTML = 'Membership tokens <br/>are temporarily sold out'
-    document.getElementById('membership-sale-status').classList.remove('hidden')
-}
-
-function showErrorMessage() {
-    document.getElementById('connect-wallet-button').classList.add('hidden')
-    document.getElementById('switch-network-stage').classList.add('hidden')
-
-    document.getElementById('error-message').classList.remove('hidden')
-    document.getElementById('membership-sale-status').classList.add('hidden')
-    document.getElementById('membership-description').classList.add('hidden')
-}
-
-function disableMintButton() {
-    mintButton = document.getElementById('mint-button')
-    mintButton.innerHTML = 'Minting your membership...'
-    mintButton.classList.add('animate-pulse', 'cursor-not-allowed', 'opacity-20')
-    mintButton.setAttribute('disabled', 'disabled')
-
-    document.getElementById('mint-fail-message').classList.add('hidden')
-}
-
-function restoreMintButton() {
-    mintButton = document.getElementById('mint-button')
-    mintButton.innerHTML = 'Mint your membership token!'
-    mintButton.classList.remove('animate-pulse', 'cursor-not-allowed', 'opacity-20')
-    mintButton.removeAttribute('disabled')
-}
-
 function isEthereumWalletConnected() {
     return window.ethereum && window.ethereum.selectedAddress != null
 }
@@ -141,97 +34,166 @@ function isRightNetworkSelected() {
     return window.ethereum.chainId == CHAIN.id
 }
 
-function selectStage() {
-    if (window.ethereum) {
-        window.web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546')
-
-        if (isEthereumWalletConnected()) {
-            if (isRightNetworkSelected()) {
-                showMintStage()
-            } else {
-                showSwitchNetworkStage()
-            }
-        } else {
-            showConnectWalletStage()
-        }
-    } else {
-        showErrorMessage()
-    }
+async function isMintOpen() {
+    let { totalSupply, maxSupply, price } = contractGetSupplyAndPrice()
+    return totalSupply < maxSupply
 }
 
-function selectStageAfterWalletUpdatesNetwork() {
+async function contractGetSupplyAndPrice() {
+    var contract = new window.web3.eth.Contract(JSON.parse(contractJSONInterface), CONTRACT)
+
+    const supplyAndPrice = await contract.methods.getSupplyAndPrice().call()
+
+    const maxSupply = parseInt(supplyAndPrice[0])
+    const totalSupply = parseInt(supplyAndPrice[1])
+    const price = parseFloat(supplyAndPrice[2]) / 1e18
+
+    return { totalSupply, maxSupply, price }
+}
+
+async function contractMint() {
+    var contract = new window.web3.eth.Contract(JSON.parse(contractJSONInterface), CONTRACT)
+
+    const currentPrice = await contract.methods.getPrice().call()
+
+    return contract.methods.mint().send({ from: window.ethereum.selectedAddress, value: currentPrice })
+}
+
+async function updateTokenSupply() {
+    let { totalSupply, maxSupply, price } = await contractGetSupplyAndPrice()
+
+    document.getElementById('max-token-supply').innerHTML = maxSupply
+    document.getElementById('currently-minted-tokens').innerHTML = totalSupply
+
+    if (price == 0) document.getElementById('current-price').innerHTML = 'free'
+    else document.getElementById('current-price').innerHTML = price + ' MATIC'
+}
+
+function noWalletStage() {
+    document.getElementById('stage-0-no-wallet').classList.remove('hidden')
+}
+
+function connectWalletStage() {
+    document.getElementById('stage-1-connect-wallet').classList.remove('hidden')
+}
+
+function switchNetworkStage() {
+    document.getElementById('stage-2-switch-network').classList.remove('hidden')
+}
+
+async function mintOpenStage() {
+    updateTokenSupply()
+    document.getElementById('stage-3-mint-open').classList.remove('hidden')
+}
+
+function mintClosedStage() {
+    document.getElementById('stage-4-mint-closed').classList.remove('hidden')
+}
+
+async function selectStage() {
+    // Hide all stages
+    document.querySelectorAll('[id^="stage-"]').forEach((stage) => stage.classList.add('hidden'))
+
+    // Stage 0 - no wallet installed
+    if (!window.ethereum) {
+        noWalletStage()
+        return
+    }
+
+    // Stage 1 - connect wallet
+    if (!isEthereumWalletConnected()) {
+        connectWalletStage()
+        return
+    }
+
+    // Stage 2 - switch wallet to Polygon network
+    if (!isRightNetworkSelected()) {
+        switchNetworkStage()
+        return
+    }
+
+    // Stage 3 - mint
+    if (isMintOpen()) {
+        mintOpenStage()
+        return
+    }
+
+    // Stage 4 - mint closed
+    mintClosedStage()
+}
+
+function selectStageDelayed() {
     setTimeout(selectStage, 1000)
 }
 
-function init() {
-    selectStage()
-
-    // Connect wallet button
+function initConnectWalletButton() {
     document.getElementById('connect-wallet-button').addEventListener('click', async () => {
-        if (window.ethereum) {
-            try {
-                const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
-                window.ethereum.currentAccount = accounts[0]
-                selectStage()
-            } catch (error) {
-                if (error.code === 4001) {
-                    selectStage()
-                }
-            }
-        } else {
-            showErrorMessage()
-        }
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+        window.ethereum.currentAccount = accounts[0]
+        selectStage()
     })
+}
 
-    // Switch network button
+function initSwitchNetworkButton() {
     document.getElementById('switch-network-button').addEventListener('click', async () => {
         try {
             await window.ethereum.request({
                 method: 'wallet_switchEthereumChain',
                 params: [{ chainId: CHAIN.id }],
             })
-            selectStageAfterWalletUpdatesNetwork()
+            selectStageDelayed()
         } catch (error) {
             if (error.code === 4902) {
-                try {
-                    await window.ethereum.request({
-                        method: 'wallet_addEthereumChain',
-                        params: [
-                            {
-                                chainId: CHAIN.id,
-                                chainName: CHAIN.name,
-                                rpcUrls: [CHAIN.rpcUrl],
-                                nativeCurrency: {
-                                    name: CHAIN.currencyName,
-                                    symbol: CHAIN.currencySymbol,
-                                    decimals: CHAIN.currencyDecimals,
-                                },
-                                blockExplorerUrls: [CHAIN.blockExplorerUrl],
+                await window.ethereum.request({
+                    method: 'wallet_addEthereumChain',
+                    params: [
+                        {
+                            chainId: CHAIN.id,
+                            chainName: CHAIN.name,
+                            rpcUrls: [CHAIN.rpcUrl],
+                            nativeCurrency: {
+                                name: CHAIN.currencyName,
+                                symbol: CHAIN.currencySymbol,
+                                decimals: CHAIN.currencyDecimals,
                             },
-                        ],
-                    })
-                    selectStageAfterWalletUpdatesNetwork()
-                } catch (error) {
-                    showErrorMessage()
-                }
+                            blockExplorerUrls: [CHAIN.blockExplorerUrl],
+                        },
+                    ],
+                })
+                selectStageDelayed()
             }
         }
     })
+}
 
-    // Mint button
-    document.getElementById('mint-button').addEventListener('click', async () => {
-        let mintPromise = callMint()
-
+function initMintButton() {
+    const disableMintButton = () => {
         mintButton = document.getElementById('mint-button')
+        mintButton.classList.add('animate-pulse', 'cursor-not-allowed', 'opacity-20')
+        mintButton.setAttribute('disabled', 'disabled')
 
+        document.getElementById('mint-button-default').classList.add('hidden')
+        document.getElementById('mint-button-minting').classList.remove('hidden')
+
+        document.getElementById('mint-fail-message').classList.add('hidden')
+    }
+
+    const restoreMintButton = () => {
+        mintButton = document.getElementById('mint-button')
+        mintButton.classList.remove('animate-pulse', 'cursor-not-allowed', 'opacity-20')
+        mintButton.removeAttribute('disabled')
+
+        document.getElementById('mint-button-default').classList.remove('hidden')
+        document.getElementById('mint-button-minting').classList.add('hidden')
+    }
+
+    document.getElementById('mint-button').addEventListener('click', async () => {
         disableMintButton()
 
-        mintPromise.then(
+        contractMint().then(
             () => {
                 document.getElementById('mint-success-message').classList.remove('hidden')
-                mintButton.classList.add('hidden')
-
-                updateTokenSupply()
+                document.getElementById('mint-button').classList.add('hidden')
                 selectStage()
             },
             (error) => {
@@ -240,6 +202,21 @@ function init() {
             }
         )
     })
+}
+
+async function init() {
+    // Connect to the blockchain
+    if (window.ethereum) {
+        window.web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546')
+    }
+
+    // Initialize the buttons
+    initConnectWalletButton()
+    initSwitchNetworkButton()
+    initMintButton()
+
+    // Select the stage
+    selectStage()
 }
 
 window.addEventListener('load', init)
