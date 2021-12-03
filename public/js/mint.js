@@ -45,6 +45,9 @@ async function isBalanceEnough() {
     )
     let { totalSupply, maxSupply, price } = await contractGetSupplyAndPrice()
 
+    console.log('Wallet:', walletBalance)
+    console.log('Price:', price)
+
     return walletBalance > price
 }
 
@@ -55,7 +58,7 @@ async function contractGetSupplyAndPrice() {
 
     const maxSupply = parseInt(supplyAndPrice[0])
     const totalSupply = parseInt(supplyAndPrice[1])
-    const price = 5 + parseFloat(window.web3.utils.fromWei(supplyAndPrice[2]))
+    const price = parseFloat(window.web3.utils.fromWei(supplyAndPrice[2]))
 
     return { totalSupply, maxSupply, price }
 }
@@ -68,6 +71,12 @@ async function contractMint() {
     return contract.methods.mint().send({ from: window.ethereum.selectedAddress, value: currentPrice })
 }
 
+async function contractGetUserToken() {
+    var contract = new window.web3.eth.Contract(JSON.parse(contractJSONInterface), CONTRACT)
+
+    return await contract.methods.balanceOf(web3.currentProvider.selectedAddress).call()
+}
+
 async function updateTokenSupply() {
     let { totalSupply, maxSupply, price } = await contractGetSupplyAndPrice()
 
@@ -76,6 +85,25 @@ async function updateTokenSupply() {
 
     if (price == 0) document.getElementById('current-price').innerHTML = 'free'
     else document.getElementById('current-price').innerHTML = price + ' MATIC'
+}
+
+async function updateBalanceMessage() {
+    if (!(await isBalanceEnough())) {
+        document.getElementById('insufficient-balance-message').classList.remove('hidden')
+
+        document.getElementById('mint-button').disabled = true
+        document.getElementById('mint-button').classList.add('cursor-not-allowed', 'opacity-40')
+    }
+}
+
+async function updateSuccessfulMintMessage() {
+    if ((await contractGetUserToken()) > 0) {
+        document.getElementById('mint-success-message').classList.remove('hidden')
+        document.getElementById('mint-button').classList.add('hidden')
+        return true
+    }
+
+    return false
 }
 
 function noWalletStage() {
@@ -90,17 +118,18 @@ function switchNetworkStage() {
     document.getElementById('stage-2-switch-network').classList.remove('hidden')
 }
 
-function insufficientBalanceStage() {
-    document.getElementById('stage-3-insufficient-balance').classList.remove('hidden')
-}
-
 async function mintOpenStage() {
     updateTokenSupply()
-    document.getElementById('stage-4-mint-open').classList.remove('hidden')
+
+    if (!updateSuccessfulMintMessage()) {
+        updateBalanceMessage()
+    }
+
+    document.getElementById('stage-3-mint-open').classList.remove('hidden')
 }
 
 function mintClosedStage() {
-    document.getElementById('stage-5-mint-closed').classList.remove('hidden')
+    document.getElementById('stage-4-mint-closed').classList.remove('hidden')
 }
 
 async function selectStage() {
@@ -125,19 +154,13 @@ async function selectStage() {
         return
     }
 
-    // Stage 3 - is balance enough
-    if (!isBalanceEnough()) {
-        insufficientBalanceStage()
-        return
-    }
-
-    // Stage 4 - mint
+    // Stage 3 - mint
     if (isMintOpen()) {
         mintOpenStage()
         return
     }
 
-    // Stage 5 - mint closed
+    // Stage 4 - mint closed
     mintClosedStage()
 }
 
@@ -189,7 +212,7 @@ function initMintButton() {
     const disableMintButton = () => {
         mintButton = document.getElementById('mint-button')
         mintButton.classList.add('animate-pulse', 'cursor-not-allowed', 'opacity-20')
-        mintButton.setAttribute('disabled', 'disabled')
+        mintButton.disabled = true
 
         document.getElementById('mint-button-default').classList.add('hidden')
         document.getElementById('mint-button-minting').classList.remove('hidden')
@@ -200,7 +223,7 @@ function initMintButton() {
     const restoreMintButton = () => {
         mintButton = document.getElementById('mint-button')
         mintButton.classList.remove('animate-pulse', 'cursor-not-allowed', 'opacity-20')
-        mintButton.removeAttribute('disabled')
+        mintButton.disabled = false
 
         document.getElementById('mint-button-default').classList.remove('hidden')
         document.getElementById('mint-button-minting').classList.add('hidden')

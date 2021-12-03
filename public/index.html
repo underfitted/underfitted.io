@@ -239,17 +239,7 @@
                     </button>
                 </div>
 
-                <div id="stage-3-insufficient-balance" class="hidden">
-                    <p class="mt-4 text-2xl leading-relaxed text-gray-400">
-                        Your current balance is not enough to mint a membership token. Please load your wallet with some more MATIC. We recommend two options:
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </p>
-                </div>
-
-                <div id="stage-4-mint-open" class="hidden">
+                <div id="stage-3-mint-open" class="hidden">
                     <h2
                         class="
                             text-6xl
@@ -268,6 +258,14 @@
                     </p>
                     <p class="mt-4 text-gray-500 text-xl">
                         Current price: <span id="current-price" class="text-gray-300 font-bold"></span>
+                    </p>
+
+                    <p id="insufficient-balance-message" class="mt-8 text-red-200 font-semibold text-xl hidden">
+                        You don't have enough funds in your wallet to mint. You can buy MATIC on an exchange like
+                        <a href="https://www.moonpay.com/buy/matic" target="_blank" class="text-blue-600">MoonPay</a>
+                        or check out our
+                        <a href="https://svpino.gumroad.com/l/xWIaW" target="_blank" class="text-blue-600">Gumroad</a>
+                        product if you simply want to pay with a credit card.
                     </p>
 
                     <button
@@ -295,11 +293,9 @@
                         There was a problem minting your token. Please, try again.
                     </div>
 
-                    <div
-                        id="mint-success-message"
-                        class="mt-12 text-2xl rounded-xl w-128 mx-auto text-green-700 p-4 font-bold hidden">
-                        Congrats! Your membership was successfully minted!
-                    </div>
+                    <p id="mint-success-message" class="mt-8 text-green-200 font-bold text-xl hidden">
+                        Congratulations! You've successfully minted your membership card.
+                    </p>
 
                     <p class="mt-4 text-gray-500 text-xl">
                         Minted memberships: <span id="currently-minted-tokens">10</span> /
@@ -308,7 +304,7 @@
                 </div>
             </div>
 
-            <div id="stage-5-mint-closed" class="hidden">
+            <div id="stage-4-mint-closed" class="hidden">
                 <h2
                     class="
                         text-6xl
