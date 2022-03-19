@@ -20,15 +20,7 @@ To get involved, join our [Discord server](https://discord.gg/Fqf5uvj3NG)!
 
 ## Getting Started
 
-The website is deployed on Firebase, but at the moment we are only using static feauters. This means that you can simply open the `public/index.html` file in your browser to see the website.
-
-### Serving with Firebase
-
-To serve the website with Firebase run:
-
-```shell
-$ firebase serve --port 5050
-```
+The website is static so you can simply open the `public/index.html` file in your browser to see the website.
 
 ### Serving using a local Python server
 
@@ -41,13 +33,7 @@ python3 -m http.server --cgi 8080
 
 ## Deploying the Website
 
-To deploy the local changes you can use the following command:
-
-```shell
-$ firebase deploy
-```
-
-The CI is configured to deploy the website automatically, when a new commit is pushed to `main`.
+The website is deployed automatically after pushing to `main` on AWS Amplify.
 
 ## Smart Contract Integration
 
